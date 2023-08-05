@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <script src="src/js/script.js"></script>
+    <title>Pandora Turismo Radical</title>
+</head>
+
+<body class="bg-dark text-black">
+  <header class="position-relative">
+    
+    <!-- Botão de alternância para o dark mode -->
+    <div class="toggle-theme"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="toggle-theme">
+        <button class="btn btn-sm btn-outline-light" onclick="toggleDarkMode()">
+          Modo Claro
+        </button>
+      </div>
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pandora Turismo Radical</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./destino.html">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./promocao.html">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Background image -->
+    <div id="heroDestino" class="p-5 text-center d-flex justify-content-center align-items-center">
+        <div class="mask p-5 container rounded">
+            <form method="post">
+                <h3 class="mb-3">Escolha a sua Aventura!</h3>
+                <div class="row g-3 align-items-center">
+                    <div class="col-lg-4 col-12">
+                        <div class="form-floating">
+                            <input class="form-control" list="origemOptions" id="origem">
+                            <datalist id="origemOptions">
+                                <option value="Bonito">
+                                  Bonito, MS.
+                                </option>
+                                <option value="Brotas">
+                                  Brotas, SP
+                                </option>
+                                <option value="Chapada dos Veadeiros">
+                                  Chapada dos Veadeiros, GO
+                                </option>
+                                <option value="Curitiba, PR">
+                                  Curitiba, PR
+                                </option>
+                                <option value="Fortaleza">
+                                  Fortaleza, CE
+                                </option>
+                                <option value="Foz do Iguaçu">
+                                  Foz do Iguaçu, PR
+                                </option>
+                                <option value="Florianópolis">
+                                  Florianópolis, SC
+                                </option>
+                                <option value="Rio de Janeiro">
+                                  Rio de Janeiro, RJ
+                                </option>
+                                <option value="São Paulo">
+                                  São Paulo, SP
+                                </option>
+                                <option value="Serra do Cipó">
+                                  Serra do Cipó, MG
+                                </option>
+                                <option value="Socorro">
+                                  Socorro, SP
+                                </option>
+                            </datalist>
+
+                            <label for="origem">
+                                Origem
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="form-floating">
+                            <input class="form-control" list="origemOptions" id="origem">
+                            <datalist id="origemOptions">
+                                <option value="Foz do Iguaçu">
+                                  Foz do Iguaçu,
+                                </option>
+                                <option value="Rio de Janeiro">
+                                  Rio de Janeiro
+                                </option>
+                                <option value="Florianópolis">
+                                  Florianópolis
+                                </option>
+                                <option value="Fortaleza">
+                                  Fortaleza
+                                </option>
+                                <option value="Curitiba">
+                                  Curitiba, PR
+                                </option>
+                            </datalist>
+
+                            <label for="origem">
+                                Destino
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-12">
+                        <div class="row g-2">
+                            <div class="col-6 col-lg-12">
+
+                                <div class="input-group">
+                                    <span class="input-group-text">Check in</span>
+                                    <input type="date" name="check_in" id="check_in" class="p-1 form-control">
+                                  </div>
+                                  
+                            </div>
+                            <div class="col-6 col-lg-12">
+
+                                <div class="input-group">
+                                    <span class="input-group-text">Check out</span>
+                                    <input type="date" name="check_out" id="check_out" class="p-1 form-control">
+                                  </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</i></button>
+
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+    <!-- Background image -->
+    </header>
+    <main class="content-fluid m-3">
+        <section>
+
+            <div class="my-3">
+                <h2>Destinos</h2>
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-rj01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Rio de Janeiro, RJ.
+                    </h5>
+                    <p class="card-text">Além das praias icônicas, oferece asa-delta, parapente, escalada no Morro da Urca e trilhas na Floresta da Tijuca.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-sp03.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      São Paulo, SP.
+                    </h5>
+                    <p class="card-text">Perto da capital, você pode encontrar ótimos locais para prática de escalada, como a Pedra do Baú em Campos do Jordão.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-foz-iguacu1.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Foz do Iguaçu, PR.
+                    </h5>
+                    <p class="card-text">Oferece rafting no Rio Iguaçu e atividades emocionantes próximas às famosas Cataratas do Iguaçu.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-brotas01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Brotas, SP.
+                    </h5>
+                    <p class="card-text">Conhecida como a capital do turismo de aventura no Brasil, oferece rafting, boia-cross, rapel e trilhas.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-chapada03.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Chapada dos Veadeiros, GO.
+                    </h5>
+                    <p class="card-text">Perfeita para trekking, escalada, rapel e canionismo em meio a belas paisagens.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-socorro-sp03.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Socorro, SP.
+                    </h5>
+                    <p class="card-text">Outra cidade paulista famosa por suas atividades radicais, incluindo rafting, tirolesa e arvorismo.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-bonito01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Bonito, MS.
+                    </h5>
+                    <p class="card-text">Destino de ecoturismo e mergulho com cilindro em rios de águas cristalinas</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-floripa03.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Florianópolis, SC.
+                    </h5>
+                    <p class="card-text"> Além das praias, é um ótimo local para surf, kitesurf, windsurf e sandboard nas dunas.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white ">
+                  <img class="card-img-top" src="./src/imagens/imagem-fortaleza01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Fortaleza, CE.
+                    </h5>
+                    <p class="card-text">Para o kitesurf, é difícil superar as praias de Fortaleza, como Jericoacoara e Cumbuco.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-curitiba02.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Curitiba, PR.
+                    </h5>
+                    <p class="card-text">Oferece diversas opções de trilhas, montanhismo e rapel nos arredores.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-serra-cipo01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Serra do Cipó, MG.
+                    </h5>
+                    <p class="card-text">Perfeita para escalada, canionismo, mountain bike e trilhas em meio à natureza exuberante.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-4 col-sm-6 mb-3">
+                <div class="card bg-dark text-white">
+                  <img class="card-img-top" src="./src/imagens/imagem-brasilia01.jpg" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Brasília, DF.
+                    </h5>
+                    <p class="card-text">Nas proximidades, você pode praticar voo livre, como asa-delta e parapente em áreas especiais.</p>
+                    <a href="#" class="btn btn-primary">Visitar</a>
+                  </div>
+                </div>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+              crossorigin="anonymous"></script>
+            <script>
+              // Função para alternar entre o dark mode e o light mode
+              function toggleDarkMode() {
+                const body = document.body;
+                const currentTheme = body.classList.contains("bg-dark") ? "dark" : "light";
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                
+                body.classList.remove("bg-" + currentTheme, "text-" + currentTheme);
+                body.classList.add("bg-" + newTheme, "text-" + newTheme);
+              }
+            </script>
+
+            <div>
+              <footer class="bg-dark text-white py-4">
+              <div class="container text-center">
+
+                <small>
+                  Desenvolvido por @halluchamadureira
+                  <br>
+                  <a href="https://github.com/" class="btn-primary" target="_blank" class="text-white mx-2" title="GitHub">
+                    <i class="fab fa-github mx-2"> GitHub</i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/" class="btn-primary" target="_blank" class="text-white mx-2" title="LinkedIn">
+                    <i class="fab fa-linkedin mx-2"> LinkedIn</i>
+                  </a>
+                  
+                </small>
+              </div>
+            </footer>
+      </body>
+      </html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="./src/css/estilos.css">
+  <script src="src/js/script.js"></script>
+  <title>Pandora Turismo Radical</title>
+</head>
+
+<body class="bg-dark text-white">
+  <header class="position-relative ">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="toggle-theme">
+            <button class="btn btn-sm btn-outline-light" onclick="toggleDarkMode()">
+              Modo Claro
+            </button>
+          </div>
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#">Pandora Turismo Radical</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./destino.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./promocao.html">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contato.html">Contato</a> 
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+</header>
+
+<main class="container mt-5">
+<h2 class="text-center">Contato Pandora Turismo Radical</h2>
+<div class="row mt-5 px-5">
+    <div class="col-xl-4 col-lg-5 col-sm-12">
+        <figure class="ratio ratio-1x1 ">
+            <img src="./src/imagens/logo.contato.jpg" alt="imagem logo contato"
+            class="object-fit-cover rounded-circle">
+        </figure>
+    </div>
+
+    <div class="col mx-5 h-100 ">
+        <form class="bg-dark text-light" id="myForm" action="enviar_contato.php" method="POST" >
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="bg-dark text-light" class="mb-3">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="bg-dark text-light" class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar Mensagem</button>
+        </form>
+    </div>
+</div>
+
+</main>
+
+<footer class="container-fluid">
+<div class="row bg-secondary bg-gradient mt-5 px-5 pb-5 gy-5">
+    <div class="col-xl-3 col-sm-10 ">
+        <h4>Endereço:</h4>
+        Av. Visconde do Rio Branco<br>Centro Niterói, Rj<br>24020-004
+    </div>
+    <div class="col-xl-3 col-sm-10 ">
+        <h4>E-mail</h4>
+        contato@pandoraturismo.com.br
+        pandoraturismo.com.br
+    </div>
+    <div class="col-xl-3 col-sm-10 ">
+        <h4>Telefone</h4>
+        <br>(XX) XXXX-XXXX
+        Atendimento: Seg a Sex, das 9h às 18h
+    </div>
+
+    <div class="col-xl-3 col-sm-10">
+        <div class="row">
+            <div class=" col-xl-12 col-xxl-6">
+                <a href="https://www.facebook.com/" target="_blank" class="link-light">
+                    <i class="fab fa-facebook m-2"> Facebook</i>
+                </a>
+            </div>
+
+            <div class="col-xl-12 col-xxl-6">
+                <a href="https://www.instagram.com/" target="_blank" class="link-light">
+                    <i class="fab fa-instagram m-2"> Instagram</i>
+                </a>
+            </div>
+
+            <div class="col-xl-12 col-xxl-">
+                <a href="https://www.linkedin.com/" target="_blank" class="link-light">
+                    <i class="fab fa-linkedin m-2"> LinkedIn </i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>Desenvolvido por @halluchamadureira
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script>
+    // Função para alternar entre o dark mode e o light mode
+    function toggleDarkMode() {
+      const body = document.body;
+      const currentTheme = body.classList.contains("bg-dark") ? "dark" : "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      
+      body.classList.remove("bg-" + currentTheme, "text-" + currentTheme);
+      body.classList.add("bg-" + newTheme, "text-" + newTheme);
+    }
+  </script>
+
+</body>
+
+</html>

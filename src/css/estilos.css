@@ -1,0 +1,96 @@
+/* Paleta de Cores */
+:root {
+  --cor-primaria: #ffffff;
+  --cor-secundaria: #ffffff89;
+  --cor-terciaria: #f8f9fa;
+  --cor-texto: hsla(0, 47%, 97%, 0.275);
+}
+
+/* Estilos globais */
+body {
+  padding: 25px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  font-size: 25px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos da Navbar */
+.navbar {
+  background-color: var(--cor-terciaria);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+}
+
+.navbar-nav .nav-link {
+  color: var(--cor-texto);
+  margin-left: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Estilos do Carousel */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos da seção Destino */
+#destino {
+  background-color: var(--cor-secundaria);
+  padding: 40px 0;
+}
+
+#destino h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Estilos da seção Contato */
+#contato {
+  background-color: var(--cor-primaria);
+  padding: 40px 0;
+}
+
+#contato h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#contato p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Estilos do Footer */
+.footer {
+  background-color: var(--cor-primaria);
+  padding: 20px 0;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+  }
+}
